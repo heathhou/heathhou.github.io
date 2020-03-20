@@ -8,24 +8,26 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo_GitHub | heathhou</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装 Node.js官方网站 一路next 2.安装Git官方网站 一路next 3. 配置Git你需要一个GitHub账号，没有的话需要注册一个 点击这个，或者自己百度注册教程 生成SSH key 并连接到GitHub   ssh-keygen -t rsa -C “you_email@your_email.com“  这个email是几在github上注册的email  默认两次回车（确认">
+  <meta name="description" content="本文记录了搭建hexo博客的步骤。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo_GitHub">
-<meta property="og:url" content="http://yoursite.com/2020/03/20/Hexo_GitHub/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/Hexo_GitHub/index.html">
 <meta property="og:site_name" content="heathhou">
-<meta property="og:description" content="1.安装 Node.js官方网站 一路next 2.安装Git官方网站 一路next 3. 配置Git你需要一个GitHub账号，没有的话需要注册一个 点击这个，或者自己百度注册教程 生成SSH key 并连接到GitHub   ssh-keygen -t rsa -C “you_email@your_email.com“  这个email是几在github上注册的email  默认两次回车（确认">
+<meta property="og:description" content="本文记录了搭建hexo博客的步骤。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1015208/201812/1015208-20181226115814812-1021312262.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/981453/201908/981453-20190813153201526-547325296.png">
 <meta property="og:image" content="e:%5C%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%5CSnipaste_2020-03-16_12-54-08.png">
-<meta property="article:published_time" content="2020-03-20T12:55:10.243Z">
-<meta property="article:modified_time" content="2020-03-16T04:59:50.793Z">
+<meta property="article:published_time" content="2020-03-18T08:10:03.000Z">
+<meta property="article:modified_time" content="2020-03-20T14:26:14.488Z">
 <meta property="article:author" content="HeathHou">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="e:%5C%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%5CSnipaste_2020-03-16_12-54-08.png">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1015208/201812/1015208-20181226115814812-1021312262.png">
   
     <link rel="alternative" href="/atom.xml" title="heathhou" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -49,7 +51,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">HeathHou</a></h1>
@@ -62,6 +64,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -83,18 +87,28 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/heathhou" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weixin" target="_blank" href="/assets/weixin.jpg" title="weixin"><i class="icon-weixin"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/87894826" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:bhcbfx@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+
+<!-- 网易云音乐插件 -->
+
+	<div style="position:absolute; bottom:120px left:auto; width:85%">
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=75 src="//music.163.com/outchain/player?type=2&id=815787&auto=1&height=66"></iframe>
+	</div>
+
+
 		</nav>
 	</header>		
 </div>
+
+
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -107,7 +121,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">HeathHou</h1>
@@ -119,29 +133,33 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/heathhou" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weixin" target="_blank" href="/assets/weixin.jpg" title="weixin"><i class="icon-weixin"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/87894826" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:bhcbfx@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,7 +174,12 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hexo_GitHub" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+<article id="post-Hexo_GitHub" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -168,35 +191,48 @@
   
 
         
-        <a href="/2020/03/20/Hexo_GitHub/" class="archive-article-date">
-  	<time datetime="2020-03-20T12:55:10.243Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
+        <a href="/2020/03/18/Hexo_GitHub/" class="archive-article-date">
+  	<time datetime="2020-03-18T08:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-安装-Node-js"><a href="#1-安装-Node-js" class="headerlink" title="1.安装 Node.js"></a>1.安装 Node.js</h1><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">官方网站</a></p>
+        <p>本文记录了搭建hexo博客的步骤。</p>
+<a id="more"></a>
+
+<h1 id="1-安装-Node-js"><a href="#1-安装-Node-js" class="headerlink" title="1.安装 Node.js"></a>1.安装 Node.js</h1><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">官方网站</a></p>
 <p>一路next</p>
 <h1 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官方网站</a></p>
 <p>一路next</p>
-<h1 id="3-配置Git"><a href="#3-配置Git" class="headerlink" title="3. 配置Git"></a>3. 配置Git</h1><p>你需要一个GitHub账号，没有的话需要注册一个</p>
+<h1 id="3-配置Git"><a href="#3-配置Git" class="headerlink" title="3. 配置Git"></a>3. 配置Git</h1><h2 id="（1）注册Github账号"><a href="#（1）注册Github账号" class="headerlink" title="（1）注册Github账号"></a>（1）注册Github账号</h2><p>你需要一个GitHub账号，没有的话需要注册一个</p>
 <p><a href="https://jingyan.baidu.com/article/4ae03de3d6f9c53eff9e6bdd.html" target="_blank" rel="noopener">点击这个，或者自己百度注册教程</a></p>
-<p>生成SSH key 并连接到GitHub</p>
+<h2 id="（2）设置用户名和用户邮箱"><a href="#（2）设置用户名和用户邮箱" class="headerlink" title="（2）设置用户名和用户邮箱"></a>（2）设置用户名和用户邮箱</h2><p>设置用户名，输入：</p>
+<blockquote>
+<p> git  config –global  user.name  “你再github上注册的用户名”</p>
+</blockquote>
+<p>设置用户邮箱，输入：</p>
+<blockquote>
+<p>git  config –global  user.email  “注册时候的邮箱”</p>
+</blockquote>
+<h2 id="（3）生成SSH-key"><a href="#（3）生成SSH-key" class="headerlink" title="（3）生成SSH key"></a>（3）生成SSH key</h2><p>新建一个文件夹，比如我这里建了 ==my_hexo_blog==<br>打开你的文件夹，然后在空白处点鼠标的右键，选择 ==Git Bash Here==</p>
+<p>我们以后所有的操作都在这个文件夹里，失败的话可以删掉重来。</p>
+<blockquote>
+<p>这个Git Bash Here就相当于Linux中的终端窗口了，以后我们就用这个东东来打开终端。</p>
+<p>(不知道为什么我用Git Bash不管用，用cmd可以)</p>
+</blockquote>
+<p>然后输入：</p>
 <blockquote>
 <p> ssh-keygen -t rsa -C “<a href="mailto:you_email@your_email.com">you_email@your_email.com</a>“</p>
 <p> 这个email是几在github上注册的email</p>
 <p> 默认两次回车（确认路径和密码）</p>
+<p> 你也可以设置密码，这里两次回车是设置没密码</p>
 </blockquote>
-<p>连接到github上</p>
-<p>设置用户名：</p>
-<blockquote>
-<p> git  config –global  user.name  “你再github上注册的用户名”</p>
-</blockquote>
-<p>设置用户邮箱：</p>
-<blockquote>
-<p>git  config –global  user.email  “注册时候的邮箱”</p>
-</blockquote>
+<h2 id="（4）把SSH-key（公钥）连接到github上"><a href="#（4）把SSH-key（公钥）连接到github上" class="headerlink" title="（4）把SSH key（公钥）连接到github上"></a>（4）把SSH key（公钥）连接到github上</h2><p>找到这个地址，将id_rsa.pub用记事本打开并复制里面的内容：</p>
+<p> <img src="https://img2018.cnblogs.com/blog/1015208/201812/1015208-20181226115814812-1021312262.png" alt=""></p>
+<p>打开GitHub网站：</p>
+<p><img src="https://img2018.cnblogs.com/blog/981453/201908/981453-20190813153201526-547325296.png" alt=""></p>
 <h1 id="4-安装hexo"><a href="#4-安装hexo" class="headerlink" title="4.安装hexo"></a>4.安装hexo</h1><ol>
 <li><p>新建一个文件夹，比如我这里建了 ==my_hexo_blog==<br>打开你的文件夹，然后在空白处点鼠标的右键，选择 ==Git Bash Here==</p>
 <blockquote>
@@ -266,7 +302,7 @@
 <p>hexo d</p>
 </blockquote>
 <p>常用的命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #用来清理缓存文件</span><br><span class="line">hexo g      #生成文件</span><br><span class="line">hexo  s     #运行本地服务器</span><br><span class="line">hexo  d   #上传到服务器</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;test&quot; # 新建名为test的md文档</span><br><span class="line">hexo clean #用来清理缓存文件</span><br><span class="line">hexo g      #生成文件</span><br><span class="line">hexo  s     #运行本地服务器</span><br><span class="line">hexo  d   #上传到服务器</span><br></pre></td></tr></table></figure>
       
 
       
@@ -282,6 +318,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipayCollection.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weChatCollection.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -293,6 +339,11 @@
       
     </div>
     <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
       
       
@@ -345,7 +396,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/20/Hexo_GitHub/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://heathhou.github.io/2020/03/18/Hexo_GitHub/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -359,9 +410,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/03/20/Eclipse%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Eclipse快捷键
+        
+      </div>
+    </a>
   
-    <a href="/2020/03/20/Git%E4%B8%8EGithub/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git与Github</div>
+  
+    <a href="/2020/03/18/Git%E4%B8%8EGithub/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo_GitHub</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,6 +440,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-安装-Node-js"><span class="toc-number">1.</span> <span class="toc-text">1.安装 Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-安装Git"><span class="toc-number">2.</span> <span class="toc-text">2.安装Git</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-配置Git"><span class="toc-number">3.</span> <span class="toc-text">3. 配置Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#（1）注册Github账号"><span class="toc-number">3.1.</span> <span class="toc-text">（1）注册Github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#（2）设置用户名和用户邮箱"><span class="toc-number">3.2.</span> <span class="toc-text">（2）设置用户名和用户邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#（3）生成SSH-key"><span class="toc-number">3.3.</span> <span class="toc-text">（3）生成SSH key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#（4）把SSH-key（公钥）连接到github上"><span class="toc-number">3.4.</span> <span class="toc-text">（4）把SSH key（公钥）连接到github上</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-安装hexo"><span class="toc-number">4.</span> <span class="toc-text">4.安装hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-运行测试"><span class="toc-number">5.</span> <span class="toc-text">5. 运行测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-将博客部署到GitHub上"><span class="toc-number">6.</span> <span class="toc-text">6. 将博客部署到GitHub上</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -412,6 +485,10 @@
     </div>
   </div>
 </footer>
+
+<!--页面点击小红心-->
+<script type="text/javascript" src="/love.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -485,6 +562,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -536,26 +617,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
