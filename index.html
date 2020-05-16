@@ -180,6 +180,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java_care" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/22/java_care/">java_care</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/22/java_care/" class="archive-article-date">
+  	<time datetime="2020-03-22T09:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文记录了关于Java本人需要注意的的一些点。</p>
+        
+      
+
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/22/java_care/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Markdown基础教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -203,6 +286,10 @@
         <p>本文记录了Markdown的编写方式</p>
         
       
+
+
+
+
 
       
     </div>
@@ -282,6 +369,10 @@
         <p>本文记录了IDEA常用快捷键</p>
         
       
+
+
+
+
 
       
     </div>
@@ -366,6 +457,10 @@
         
       
 
+
+
+
+
       
     </div>
     <div class="article-info article-info-index">
@@ -449,6 +544,10 @@
         
       
 
+
+
+
+
       
     </div>
     <div class="article-info article-info-index">
@@ -504,6 +603,98 @@
 
 
   
+    <article id="post-java与c的易混淆区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/">java与c的易混淆区别</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2020-03-21T08:32:53.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="switch-支持的数据类型"><a href="#switch-支持的数据类型" class="headerlink" title="switch 支持的数据类型"></a>switch 支持的数据类型</h1><p>C：</p>
+<blockquote>
+<p>short int long char (unsigned,signed)</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>（expression）</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span> : statement1;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : statement2;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span> : statement3;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: statement4;<span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
+
+<p>expression结果必须是<u><strong><em>整型值</em></strong></u>（包括char），case<u><strong><em>标签</em></strong></u>必须是整数类型（包括char）的常量或整形常量表达式，不能用变量来用做case的标签。</p>
+<p>java: </p>
+<blockquote>
+<p> byte  short  int char  枚举   String</p>
+</blockquote>
+<p>其中String(jdk1.7）以后才支持<br>expression本质上是支持<strong>*<u>int</u>*</strong>类型， byte  short  char  都默认转换成int，String根据哈希值，归跟到底还是int型。</p>
+<p>expression与case是String或者不是String要一致。</p>
+<h1 id="数据类型的精确性"><a href="#数据类型的精确性" class="headerlink" title="数据类型的精确性"></a>数据类型的精确性</h1><p>C语言的数据类型比较</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%f"</span>,<span class="number">0.01</span> + <span class="number">0.09</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出结果为：0.100000</p>
+</blockquote>
+<p>Java的基本数据类型不是很精确：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">0.01</span> + <span class="number">0.09</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输出结果为：0.09999999999999999</p>
+</blockquote>
+<p>要想在java中也使用精确的数据，可以使用BigDecimal类。</p>
+
+      
+
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git与Github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -527,6 +718,10 @@
         <p>本文记录了Git与Github相关的一些操作</p>
         
       
+
+
+
+
 
       
     </div>
@@ -601,6 +796,10 @@
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
         
       
+
+
+
+
 
       
     </div>

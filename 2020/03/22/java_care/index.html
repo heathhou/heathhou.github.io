@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | heathhou</title>
+  <title>java_care | heathhou</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="heathhou">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="本文记录了关于Java本人需要注意的的一些点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java_care">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/java_care/index.html">
 <meta property="og:site_name" content="heathhou">
+<meta property="og:description" content="本文记录了关于Java本人需要注意的的一些点。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="f:%5C%E6%88%91%E7%9A%84%E5%9B%BE%E7%89%87%5Cmy_blog%5CTIM%E6%88%AA%E5%9B%BE20200321163012.png">
+<meta property="og:image" content="f:%5C%E6%88%91%E7%9A%84%E5%9B%BE%E7%89%87%5Cmy_blog%5CSnipaste_2020-03-21_18-21-57.png">
+<meta property="article:published_time" content="2020-03-22T09:10:03.000Z">
+<meta property="article:modified_time" content="2020-03-25T10:18:06.528Z">
 <meta property="article:author" content="HeathHou">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="f:%5C%E6%88%91%E7%9A%84%E5%9B%BE%E7%89%87%5Cmy_blog%5CTIM%E6%88%AA%E5%9B%BE20200321163012.png">
   
     <link rel="alternative" href="/atom.xml" title="heathhou" type="application/atom+xml">
   
@@ -179,35 +187,222 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+<article id="post-java_care" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      java_care
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/22/java_care/" class="archive-article-date">
+
+        
+        <a href="/2020/03/22/java_care/" class="archive-article-date">
   	<time datetime="2020-03-22T09:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/22/java_care/">java_care</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文记录了关于Java本人需要注意的的一些点。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h1 id="一-基础知识（大部分与C相同）"><a href="#一-基础知识（大部分与C相同）" class="headerlink" title="一. 基础知识（大部分与C相同）"></a>一. 基础知识（大部分与C相同）</h1><ol>
+<li>关键字：（<strong>部分关键字与C不同）</strong></li>
+</ol>
+<ul>
+<li>概念：<br>关键字是被Java语言赋予特殊含义，具有专门用途的单词。<br>比如class，public，static，void均为Java已经预设好的。</li>
+<li>特点：</li>
+</ul>
+<p><strong>完全由小写字母组成</strong>；<br>在增强版记事本（例如Notepad++）当中有特殊颜色。</p>
+<ul>
+<li>Java中所有的关键字列表：（现阶段不要背，随着学习内容逐步深入，慢慢了解含义）</li>
+</ul>
+<ol start="2">
+<li>常量:</li>
+</ol>
+<ul>
+<li>概念：<strong>程序运行期间，固定不变的量</strong>。</li>
+<li>分类：<ul>
+<li>字符串常量，使用英文双引号引起来的内容。</li>
+<li>整数常量，例如100、120、-250等。</li>
+<li>浮点数（小数）常量，例如3.14、-2.5等。</li>
+<li>字符常量，使用英文单引号引起来的单个字符，例如’A’、’b’、’中’等。<strong>必须有且仅有一个字符。</strong></li>
+<li>布尔常量，只有两种取值：true和false。通常用于条件判断和流程控制。</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>标识符：</li>
+</ol>
+<ul>
+<li><p>作用：给类、变量、包、方法等起名字。</p>
+<ul>
+<li>组成规则（硬性规定）</li>
+<li>只能由字符、下划线、美元符$组成。这里的字符包括大小写字母、中文字符、数字字符等，但符号只能有两个：下划线和美元符$；（C只有英文字母，数字，下划线）</li>
+<li>不能以数字开头；</li>
+<li>不能是Java中的关键字。</li>
+</ul>
+</li>
+<li><p>命名规则（软性建议）</p>
+<ul>
+<li>基本要求：见名知意。</li>
+<li>建议只使用英文字母和数字。</li>
+<li>常见命名的规则：<ul>
+<li>类:<br> 每个单词首字母大写，例如Student、HelloWorld。</li>
+<li>变量:<br> 第一个单词完全小写，后续更多单词首字母大写，例如age、ageOfMyGirlfriend。</li>
+<li>方法:<br> 与变量规则一样，例如show()、getAge()。</li>
+<li>包（其实就是文件夹，用于对类进行管理）:<br> 全部小写，多级包用点隔开。公司域名的反写。<br> cn.itcast            （相当于两级文件夹：cn\itcast）<br> com.itheima        （相当于两级文件夹：com\itheima）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>定义常量：例如：<strong>public static final</strong> MAX = 1024；</li>
+</ol>
+<ol start="5">
+<li>数据类型：<strong>（与C语言有点不同）</strong><br>在Java 9（2017年9月发布）或更早版本的JDK中，数据类型只有两种：<ul>
+<li>基本类型，包括8种：byte、short、int、long、float、double、boolean、char。</li>
+<li>引用类型（除了基本类型，都算引用），包括：数组、类、接口、Lambda等。</li>
+</ul>
+</li>
+</ol>
+<p>其中的8种基本数据类型：</p>
+<p><img src="F:%5C%E6%88%91%E7%9A%84%E5%9B%BE%E7%89%87%5Cmy_blog%5CTIM%E6%88%AA%E5%9B%BE20200321163012.png" alt="TIM截图20200321163012"></p>
+<ul>
+<li>注意事项<ul>
+<li>整数类型有4种，默认为int类型。</li>
+<li>浮点数类型有2种，默认为double类型。</li>
+<li>定义一个long型数据，在数值后面要用字母L作为后缀（大小写均可，推荐大写）。<br>5200000000L</li>
+<li>定义一个float型数据，在数值后面要用字母F作为后缀（大小写均可，推荐大写）。</li>
+</ul>
+3.14F<ul>
+<li>字符char型数据，占据2个字节，是可以包含中文的。</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>取模运算：<strong>只有对整数使用取模运算，才有余数的数学意义。</strong></li>
+</ol>
+<ol start="7">
+<li>比较运算符：<strong>用于比较两个数据的关系，运算结果一定是boolean型数据。</strong></li>
+</ol>
+<ol start="8">
+<li>强制转换注意事项：<ul>
+<li>强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出。</li>
+<li>byte/short/char这三种类型都可以发生数学运算，例如加法“+”.</li>
+<li>byte/short/char这三种类型在运算的时候，都会被首先提升成为int类型，然后再计算。</li>
+<li>boolean类型不能发生数据类型转换|</li>
+</ul>
+</li>
+</ol>
+<h1 id="二-数组"><a href="#二-数组" class="headerlink" title="二. 数组"></a>二. 数组</h1><ol>
+<li>数组属于引用类型</li>
+</ol>
+<ol start="2">
+<li><strong>数组元素的默认值规则</strong>为：</li>
+</ol>
+<ul>
+<li>整数默认为0，浮点数默认为0.0，字符默认为’\u0000’（Unicode写法），布尔值默认为false，字符串等其他引用类型默认为null。</li>
+</ul>
+<ol start="3">
+<li>数组的初始化方式有两种：</li>
+</ol>
+<ul>
+<li><p>动态初始化，指定数组的长度。：</p>
+<ul>
+<li>直接指定数组的长度，也就是数组当中到底可以存放多少个数据。</li>
+<li>数据类型[] 数组名称 = new 数据类型[数组长度];</li>
+<li>数据类型[] 数组名称; 数组名称 = new 数据类型[数组长度];</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>静态初始化，指定数组的内容。：</p>
+<ul>
+<li>静态初始化不会直接指定长度，而是直接指定具体的元素内容。</li>
+</ul>
+</li>
+<li><p>数据类型[] 数组名称 = new 数据类型[] { 元素1, 元素2, 元素3, … };</p>
+<ul>
+<li>数据类型[] 数组名称; 数组名称 = new 数据类型[] {…};</li>
+</ul>
+</li>
+<li><p>简便格式：数据类型[] 数组名称 = { 元素1, 元素2, 元素3, … };一旦使用了简便格式，必须一个步骤完成初始化，不能拆分成为两个步骤。不能写数组长度。</p>
+</li>
+</ul>
+<ol start="4">
+<li>注意，数组在内存当中一旦被创建，那么<strong>长度不可改变</strong>。</li>
+</ol>
+<h1 id="三-方法（函数）"><a href="#三-方法（函数）" class="headerlink" title="三. 方法（函数）"></a>三. 方法（函数）</h1><h1 id="四-访问权限"><a href="#四-访问权限" class="headerlink" title="四. 访问权限"></a>四. 访问权限</h1><h1 id="五-类，封装"><a href="#五-类，封装" class="headerlink" title="五. 类，封装"></a>五. 类，封装</h1><h1 id="六-常用类"><a href="#六-常用类" class="headerlink" title="六. 常用类"></a>六. 常用类</h1><ol>
+<li><p><strong>String对象比较</strong>：</p>
+<ul>
+<li>单独使用*引号创建的字符串都是直接量编译期就已经确定存储到常量池中；</li>
+<li>使用new sring（””）创建的对象会存储到堆内存中，是运行期才创建；</li>
+<li>使用只包含直接量的字符串连接符如”aa”+”bb”创建的也是直接量编译期就能确定，已经确定存储到常量池中；</li>
+<li>使用包含string直接量（无fina1修饰符）的字符串表达式（如”a”+ s1）创建的对象是运行期才创建的，存储在堆中；通过变量/调肪法去连接字符串，都只能在运行时期才能确定变量的值和方法的返回值不存编译优化操作。</li>
+</ul>
+</li>
+<li><p>String,StringBuffer与StringBuilder:</p>
+<p><img src="F:%5C%E6%88%91%E7%9A%84%E5%9B%BE%E7%89%87%5Cmy_blog%5CSnipaste_2020-03-21_18-21-57.png" alt=""></p>
+</li>
+</ol>
+<h1 id="七-接口"><a href="#七-接口" class="headerlink" title="七. 接口"></a>七. 接口</h1><h1 id="八-继承"><a href="#八-继承" class="headerlink" title="八. 继承"></a>八. 继承</h1><h1 id="九-多态"><a href="#九-多态" class="headerlink" title="九. 多态"></a>九. 多态</h1><h1 id="十-泛型"><a href="#十-泛型" class="headerlink" title="十. 泛型"></a>十. 泛型</h1><h1 id="十一-集合"><a href="#十一-集合" class="headerlink" title="十一. 集合"></a>十一. 集合</h1>
+      
+
+
+
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipayCollection.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weChatCollection.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,271 +414,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://heathhou.github.io/2020/03/22/java_care/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-03-21T08:32:53.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java与c的易混淆区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/21/java%E4%B8%8Ec%E7%9A%84%E6%98%93%E6%B7%B7%E6%B7%86%E5%8C%BA%E5%88%AB/">java与c的易混淆区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-基础知识（大部分与C相同）"><span class="toc-number">1.</span> <span class="toc-text">一. 基础知识（大部分与C相同）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-数组"><span class="toc-number">2.</span> <span class="toc-text">二. 数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-方法（函数）"><span class="toc-number">3.</span> <span class="toc-text">三. 方法（函数）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四-访问权限"><span class="toc-number">4.</span> <span class="toc-text">四. 访问权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五-类，封装"><span class="toc-number">5.</span> <span class="toc-text">五. 类，封装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六-常用类"><span class="toc-number">6.</span> <span class="toc-text">六. 常用类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七-接口"><span class="toc-number">7.</span> <span class="toc-text">七. 接口</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八-继承"><span class="toc-number">8.</span> <span class="toc-text">八. 继承</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九-多态"><span class="toc-number">9.</span> <span class="toc-text">九. 多态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十-泛型"><span class="toc-number">10.</span> <span class="toc-text">十. 泛型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一-集合"><span class="toc-number">11.</span> <span class="toc-text">十一. 集合</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/21/Markdown%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-03-21T08:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/21/Markdown%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Markdown基础教程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">实用工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/20/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2020-03-20T09:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/20/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA快捷键</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">实用工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/20/Eclipse%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2020-03-20T08:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/20/Eclipse%E5%BF%AB%E6%8D%B7%E9%94%AE/">Eclipse快捷键</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">实用工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/18/Hexo_GitHub/" class="archive-article-date">
-  	<time datetime="2020-03-18T08:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/18/Hexo_GitHub/">Hexo_GitHub</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">实用工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/18/Git%E4%B8%8EGithub/" class="archive-article-date">
-  	<time datetime="2020-03-18T08:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/18/Git%E4%B8%8EGithub/">Git与Github</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">实用工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/16/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-16T01:57:47.282Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -510,8 +553,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
