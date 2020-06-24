@@ -29,7 +29,6 @@ tags: 实用技术
 11. git reflog 查看提交的操作
 12. git revert xxx 撤销某次提交的操作
     - xxx --> 操作所对应的哈希值
-13. git add & git commit
 14. git branch  查看分支
     - git branch  -v  （默认）查看有哪些分支
     - git branch a  创建a分支
@@ -43,7 +42,10 @@ tags: 实用技术
 18. git branch -D  强制删除分支
 19. git tag  贴标签
 20. git pull  （将本地更新到远程仓库一致）拉取远程仓库最新的版本并将远端同名分支合并到本地分支
-21. git fetch 获取远端的更新
+20. git fetch 获取远端的更新
+21. git clone 仓库地址 （使用git clone指令下载仓库）
+22. git clone -b 分支名 仓库地址 （使用git clone指令下载指定分支代码）
+23. git push origin master （使用master分支进行提交）
 
 
 

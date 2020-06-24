@@ -33,7 +33,7 @@ tags: 实用技术
 
 设置用户名，输入：
 
->  git  config --global  user.name  "你再github上注册的用户名"
+>  git  config --global  user.name  "你在github上注册的用户名"
 
 设置用户邮箱，输入：
 
@@ -54,7 +54,7 @@ tags: 实用技术
 
 >  ssh-keygen -t rsa -C "you_email@your_email.com"
 
-这个email是几在github上注册的email
+这个email是你在github上注册的email
 默认两次回车（确认路径和密码）
 你也可以设置密码，这里两次回车是设置没密码
 
@@ -137,7 +137,7 @@ hexo  d   #上传到服务器
 
 > 你的github账号名称.github.io
 
-安装一个部署的插件
+在==my_hexo_blog==文件夹里面执行下面语句，安装一个部署的插件
 
 > cnpm install --save hexo-deployer-git
 
@@ -154,8 +154,6 @@ deploy:
 	branch: master
 ```
 
-![Snipaste_2020-03-16_12-54-08](E:\新建文件夹\Snipaste_2020-03-16_12-54-08.png)
-
 
 
 部署到远端：
@@ -171,3 +169,17 @@ hexo g      #生成文件
 hexo  s     #运行本地服务器
 hexo  d   #上传到服务器
 ```
+
+博客已经搭建完毕，你可以到此结束，也可以继续阅读。
+
+
+
+# 7. 备份工作
+
+如图：
+
+![](https://cdn.jsdelivr.net/gh/heathhou/image_store/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/BlogBackup/FirstBlogBackup.png)
+
+接着可以参考这篇文章：
+
+https://heathhou.github.io/2020/06/19/BlogBackup/

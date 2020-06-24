@@ -5,7 +5,7 @@ top: 5
 tags: 实用技术
 ---
 
-本文记录了Markdown的编写方式
+本文记录了Markdown的编写方式。
 
 <!-- more -->
 

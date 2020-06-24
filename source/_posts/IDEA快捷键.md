@@ -4,8 +4,6 @@ date: 2020-03-20 17:10:03
 top: 5
 tags: 实用技术
 categories: 软件教程
-			
-
 ---
 
 本文记录了IDEA常用快捷键
@@ -87,5 +85,5 @@ categories: 软件教程
 
 # 六. IDEA快捷键视频详解
 
-[慕课网某教程](https://www.imooc.com/learn/924)
+[慕课网某教程](https://www.imooc.com/learn/924)：https://www.imooc.com/learn/924
 
