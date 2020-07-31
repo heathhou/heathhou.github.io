@@ -7,7 +7,7 @@ tags: 实用技术
 本文记录了Git与Github相关的一些操作
 <!-- more -->
 
-# Git具体命令
+# 1. Git具体命令
 
 1. 安装Git
 2. 在命令行输入 git 用来检测 Git 是否安装成功
@@ -51,7 +51,7 @@ tags: 实用技术
 
 
 
-# 向Github提交代码
+# 2. 向Github提交代码
 
 1. SSH
    - Linux 与 Mac 都是默认安装了 SSH ，而 Windows 系统安装了 Git Bash 应该也是带了 SSH
@@ -128,7 +128,7 @@ tags: 实用技术
 
 
 
-# Git 进阶
+# 3. Git 进阶
 
 1. 用户名和邮箱
 
