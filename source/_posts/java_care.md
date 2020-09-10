@@ -775,9 +775,29 @@ ArrayList集合直接打印对象名称，得到的不是地址值，而是内�
 ## 10.6 日常数据结构使用什么类
 
 1. 数组：ArrayList
-2. 栈：**ArrayDeque**,Stack,LinkedList
-3. 单向队列: LinkedList,ArrayDeque
-4. 双向队列：LinkedList,ArrayDeque
+2. 队列: 
+   - Queue:队列：将元素添加到双端队列的末尾，从双端队列的开头移除元素。
+   **LinkedList,ArrayDeque,PriorituQueue**
+   ![](https://gitee.com/heathhou/image_store/raw/master/分类/Java/java_care/20200808213254.png)
+   
+   - Deque:双端队列：将元素添加到双端队列的末尾，从双端队列的开头移除元素。
+   **LinkedList,ArrayDeque**
+   ![](https://gitee.com/heathhou/image_store/raw/master/分类/Java/java_care/20200808213311.png)
+   
+   ![](https://gitee.com/heathhou/image_store/raw/master/分类/Java/java_care/20200808213402.png)
+3. 栈：**ArrayDeque**,LinkedList
+   ![](https://gitee.com/heathhou/image_store/raw/master/分类/Java/java_care/20200808213447.png)
+
+
+
+   
+
+
+
+
+
+
+4. 
 
 ## 10.7 集合排序
 
