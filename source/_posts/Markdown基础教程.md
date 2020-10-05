@@ -3,6 +3,7 @@ title: Markdown基础教程
 date: 2020-03-21 16:10:03
 top: 5
 tags: 实用技术
+categories: 博客
 ---
 
 本文记录了Markdown的编写方式。

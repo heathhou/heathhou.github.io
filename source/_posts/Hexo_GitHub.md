@@ -3,6 +3,7 @@ title: Hexo_GitHub
 date: 2020-03-18 16:10:03
 top: 3
 tags: 实用技术
+categories: 博客
 ---
 
 本文记录了利用Github搭建hexo博客的步骤。
@@ -183,3 +184,5 @@ hexo  d   #上传到服务器
 接着可以参考这篇文章：
 
 https://heathhou.github.io/2020/06/19/BlogBackup/
+
+https://heathhou.vercel.app/2020/06/19/BlogBackup/

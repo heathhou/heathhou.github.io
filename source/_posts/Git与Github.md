@@ -2,6 +2,7 @@
 title: Git与Github
 date: 2020-03-18 16:10:03
 tags: 实用技术
+categories: git&github
 ---
 
 本文记录了Git与Github相关的一些操作
