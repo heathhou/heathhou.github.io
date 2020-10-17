@@ -297,30 +297,16 @@ hehe[^另一个脚注]
 - 如果是段落上的一个函数或片段的代码可以用反引号把它包起来。  
 例如：  
 ```
-    `printf("Hello world!");`    
+`printf("Hello world!");`    
 ```
    `printf("Hello world!");`  
 
 ### 2.代码区块  
 - 代码区块使用 4 个空格或者一个制表符（Tab 键）。  (最好与上面有两行的空行)
-  
-
-    #include <stdio.h>
-    int main()
-    {
-        printf("Hello world!");
-        return 0;
-    }  
 
 ##### 你也可以用 ```包裹一段代码，并指定一种语言（也可以不指定）：     
 
 
-> #include <stdio.h>   
-> int main()  
-> {  
-> printf("Hello world!");  
-> return 0;  
-> }
 
 ```C
 #include <stdio.h>

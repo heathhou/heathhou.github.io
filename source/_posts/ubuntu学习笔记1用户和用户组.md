@@ -1,12 +1,14 @@
 ---
 
-title: ubuntu常用命令
+title: ubuntu学习笔记1用户和用户组
 date: 2020-09-16 14:42:17
 categories: 
 - linux
 - ubuntu
-- 用户和用户组
+- 学习笔记
 ---
+
+<!-- more -->
 
 # 一、常用命令
 

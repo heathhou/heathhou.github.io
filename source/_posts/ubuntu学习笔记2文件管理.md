@@ -1,24 +1,42 @@
 ---
 
-title: ubuntu常用命令
+title: ubuntu学习笔记2文件管理
 date: 2020-09-16 14:42:17
 categories: 
 - linux
 - ubuntu
-- 文件管理
+- 学习笔记
 ---
 
-
+<!-- more -->
 
 
 # 一、 文件管理
 
 虚拟终端：try1-tty7  ctrl+alt+f1 f2
 
-## 1.1 常见文件格式扩展名
+## 1.1 Linux 文件基础知识
+▶ 文件管理是学习和使用Linux 的基础，也是Linux 系统管理与维护中最重要的部分之一。在Linux 系统上，任何软件和I/O 设备都被视为文件。Linux 中的文件名最大支持256 个字符，分别可以用A～Z、a～z、0～9 等字符来命名。
+▶ 和Windows 不同，Linux 中文件名是区分大小写的，所有的UNIX 系列操作系统都遵循这个规则。在Windows 下，目录结构属于分区；Linux 下分区属于目录结构。Linux 下也没有
+盘符的概念（如Windows 下的C 盘、D 盘），而只有目录，不同的硬盘分区是被挂载在不同目录下的。
+▶ Linux 文件的扩展名: 在windows 操作系统中根据文件的后缀就能判断文件的类型。比如file.txt、file.doc、file.sys、file.mp3、file.exe 等，而在linux 系统中，abc.exe 可以是文
+本文件，abc.txt 也可以是可执行文件。在Linux 中，带有扩展名的文件，只能代表程序的关联，并不能说明文件的类型，从这方面来说，Linux 的扩展名没有太大的意义。
 
-Linux 中一个文件是否能被执行，和后缀名没有太大的关系，主要和文件的属性有关。了解Linux 文件的后缀名还是有必要的，特别是自己创建一些文件，最好加后缀名，这样做的目的是为了应用方便。使用file 命令查看该文件的类型。
+
+
+▶ 压缩和归档文件扩展名及其含义如下。
+
+Linux 中一个文件是否能被执行，和后缀名没有太大的关系，主要和文件的属性有关。了解Linux 文件的后缀名还是有必要的，特别是自己创建一些文件，最好加后缀名，这样做的
+目的是为了应用方便。使用file 命令查看该文件的类型。
 ```
+gz：使用gzip 压缩的文件
+bz2：使用bzip2 压缩的文件
+tar：使用tar 压缩的文件，又称tar 文件
+tbz：使用tar 和bzip 压缩的文件
+tgz：使用tar 和gzip 压缩的文件
+zip：使用zip 压缩的文件，Linux 下使用gzip 命令压缩的文
+件
+
 au：音频文件
 gif：GIF 图像文件
 html/.htm：HTML 文件
@@ -40,6 +58,7 @@ py：Python 脚本
 so：库文件
 sh：Shell 脚本
 ```
+
 
 ## 1.2 Linux 文件类型
 Linux 下的文件可以分为4 种不同的类型：普通文件、目录文件、链接文件、特殊文件。
@@ -75,7 +94,21 @@ execute (x): 访问目录中的文件
 
 ![](https://gitee.com/heathhou/image_store/raw/master/分类/linux/ubuntu/ubuntu常用命令/20200929230912.png)
 
-## 1.4 Linux 文件系统目录结构
+▶ 在linux 中，目录也是一种文件。系统在建立每一个目录时，都会自动生成两个目录文件，一个是“.”，代表目录本身，另一个是“..”，代表目录的父目录。对于根目录而言，由于不存在父目录，所以“.”和“..”都代表其自身。
+
+
+## 1.4 Linux 目录常见概念
+▶ 1、路径，是指从树型目录中的某个目录层次到某个文件的一条道路。
+绝对路径：从“根”开始的路径。
+相对路径：从用户工作目录开始的路径。
+▶ 2、根目录
+Linux 的根目录（/）是Linux 系统中最特殊目录。
+根目录是所有目录的起点，操作系统本身的驻留程序存放在以根目录开始的专用目录中。
+▶ 用户家目录是系统管理员增加用户时建立起来的（以后也可以根据实际情况改变），每个用户都有自己的家目录，不同用户的家目录一般互不相同。用户登录到系统中时，其工作目录便是该用户的家目录，一般情况下，与用户的登录名相同，位于/home 下，但是root 用户比较特殊，其主目录为/root。用户可以通过一个～符号来引用自己的家目录。
+▶ cd ～可以进入用户自己的家目录
+▶ echo $HOME：显示用户家目录路径
+
+## 1.5 Linux 文件系统目录结构
 
 FHS:文件系统层次化标准
 
@@ -129,20 +162,11 @@ FHS:文件系统层次化标准
 /src 存放程序的源代码
 ```
 
-
-
-
-
-
-
-
-
-# 二、常用命令
-
-## 2.1 文件与目录基本操作
+## 1.6 文件与目录基本操作
 
 掌握基本的文件与目录操作命令。
 ▶ 定位文件与目录命令: 
+
 > cd pwd find locate
 > 
 
@@ -155,16 +179,16 @@ FHS:文件系统层次化标准
 > 
 
 ▶ 文件操作命令:
-> touch rm cp mv ln tar gzip gunzip whereis
+> touch rm cp mv ln tar gzip gunzip whereis whatis
 > 
 
-whatis
+
 ▶ 文件压缩和解压缩:
 > tar gzip
 > 
 
+# 二、 Linux 命令格式说明 
 
-## 2.2 Linux命令格式说明
 
 > command [-options] [parameters]
 
@@ -174,12 +198,12 @@ whatis
 2. 单字符选项前使用一个减号-，单词（多字符）选项前使用两个减号- -
    如
    
-   ```
-   ls - -help
-   ```
+```
+ls --help
+```
+
    
-   
-   
+
 3. parameters：参数是可选的或必须的
 
 4. 所有的命令从标准输入接受输入，输出结果显示在标准输出
@@ -187,12 +211,15 @@ whatis
 ▶ TAB，将命令补充完整
 ▶ 上下箭头键, 使用历史记录功能
 
-## 2.3 定位文件和目录
 
 
-1. pwd  ： 显示用户所在的位置。
+# 三、 定位文件和目录
 
-2. cd : 用来改变工作目录。
+## 3.1 pwd
+pwd  ： 显示用户所在的位置。
+
+## 3.2 cd
+cd : 用来改变工作目录。
 ```
 在使用cd 进入某个目录时，用户必须具有对该目录的读权限。
 (1) 改变当前所处的目录，如果用户当前处于/root 目录，要
@@ -211,7 +238,7 @@ root@Ubuntu:～# pwd
 (4) cd - 返回进入此目录之前所在目录
 ```
 
-## 2.4 find使用命令详解
+## 3.3 find使用命令详解
 
 find : 在硬盘上查找文件。
 find 是Linux 功能最为强大，使用也是较为复杂的命令。
@@ -239,14 +266,13 @@ option : 常用的选项
 
 
 ​    
-### 2.4.1 按照名字进行查找
+### 3.3.1 按照名字进行查找
 
 ```
 find -name file
 ```
 
- 查找名为filename的文件。
-​  
+查找名为filename的文件。
 
 ```
 (1) 从根目录开始查找文件名为passwd 的文件
@@ -267,7 +293,7 @@ find . -name ’[A-Z]*.txt’ -print
 
 
 
-### 2.4.2 按目录查找
+### 3.3.2 按目录查找
 
 (1) 在/etc 及其子目录中，查找host 开头的文件
 > find /etc -name ’host*’ -print
@@ -288,7 +314,7 @@ find 命令将在除这个目录以外的目录下查找txt 后缀文件并打�
 
 
 
-### 2.4.3 按权限查找
+### 3.3.3 按权限查找
 
 ```
 -perm 按执行权限进行查找
@@ -305,77 +331,75 @@ find ./ -perm /u=w,g=w
 
 
 
-### 2.4.4 按类型查找　（b/d/c/p/l/f ）
+### 3.3.4 按类型查找　（b/d/c/p/l/f ）
+```
+在当前目录及子目录中，查找符号链接文件
+find . -type l -print
+find /etc -name init* -a –type f
+find /etc -name init* -a -type d
+```
 
+### 3.3.5 按属主及属组查找
 
-    在当前目录及子目录中，查找符号链接文件
-    find . -type l -print
-    find /etc -name init* -a –type f
-    find /etc -name init* -a -type d
+```
+-nogroup 查无有效属组的文件，即文件的属组在/etc/groups 中不存在
+-nouser 查无有效属主的文件，即文件的属主在/etc/passwd 中不存在
 
+(1) 查找属主是www 的文件　　
+find / -user www -type f -print 　　
+(2) 查找属主被删除的文件
+find / -nouser -type f -print
+(3) 查找属组mysql 的文件
+find / -group mysql -type f -print
+(4) 查找用户组被删掉的文件
+find / -nogroup -type f -print
+```
 
-### 2.4.5 按属主及属组查找
+### 3.3.6 按时间查找
 
-    -nogroup 查无有效属组的文件，即文件的属组在/etc/groups 中不存在
-    -nouser 查无有效属主的文件，即文件的属主在/etc/passwd 中不存在
-    
-    (1) 查找属主是www 的文件　　
-    find / -user www -type f -print 　　
-    (2) 查找属主被删除的文件
-    find / -nouser -type f -print
-    (3) 查找属组mysql 的文件
-    find / -group mysql -type f -print
-    (4) 查找用户组被删掉的文件
-    find / -nogroup -type f -print
+```
+(1)atime [+-] 时间: 按照文件访问时间搜索
+(2)-mtime [+-] 时间: 按照文改时间搜索（修改文件的内容）
+(3)-ctime [+-] 时间: 按照文件修改时间搜索（修改文件的时间）
++-时间的含义:
+”-5” 指的是5 天内修改的文件，”5” 指的是前5～6 天那一天修改的文件，”+5” 指的是6 天前修改的文件。
 
-### 2.4.6 按时间查找
+(1) 查找2 天内被更改过的文件
+find . -mtime -2 -type f -print 　
+(2) 查找2 天前被更改过的文件
+find . -mtime +2 -type f -print 　
+(3) 查找一天内被访问的文件
+find . -atime -1 -type f -print
+(4) 查找一天前被访问的文件
+find . -atime +1 -type f -print 　　
+(5) 查找一天内状态被改变的文件
+find . -ctime -1 -type f -print 　
+(6) 查找一天前状态被改变的文件
+find . -ctime +1 -type f -print
 
-
-    (1)atime [+-] 时间: 按照文件访问时间搜索
-    (2)-mtime [+-] 时间: 按照文改时间搜索（修改文件的内容）
-    (3)-ctime [+-] 时间: 按照文件修改时间搜索（修改文件的时间）
-    +-时间的含义:
-    ”-5” 指的是5 天内修改的文件，”5” 指的是前5～6 天那一天修改的文件，”+5” 指的是6 天前修改的文件。
-    
-    (1) 查找2 天内被更改过的文件
-    find . -mtime -2 -type f -print 　
-    (2) 查找2 天前被更改过的文件
-    find . -mtime +2 -type f -print 　
-    (3) 查找一天内被访问的文件
-    find . -atime -1 -type f -print
-    (4) 查找一天前被访问的文件
-    find . -atime +1 -type f -print 　　
-    (5) 查找一天内状态被改变的文件
-    find . -ctime -1 -type f -print 　
-    (6) 查找一天前状态被改变的文件
-    find . -ctime +1 -type f -print
-    
-    find 不仅可以按照atime、mtime、ctime 来查找文件的时间，也可以按照amin、mmin 和cmin 来查找文件的时间，区别只是所有time 选项的默认单位是天，而min 选项的默认单位是分钟。
-    查找10 分钟以前状态被改变的文件。
-    find . -cmin +10 -type f -print
-
-
-
-​    
+find 不仅可以按照atime、mtime、ctime 来查找文件的时间，也可以按照amin、mmin 和cmin 来查找文件的时间，区别只是所有time 选项的默认单位是天，而min 选项的默认单位是分钟。
+查找10 分钟以前状态被改变的文件。
+find . -cmin +10 -type f -print
+```
 
 ![](https://gitee.com/heathhou/image_store/raw/master/分类/linux/ubuntu/ubuntu学习笔记/20200930192231.png)
 
-### 2.4.7 按文件新旧查找
+### 3.3.7 按文件新旧查找
 
-~~~
+```
 (1) 查找比abc.txt 新的文件
 find . -newer ”abc.txt” -type f -print
 (2) 查找比abc.txt 旧的文件
 find . ! -newer ”abc.txt” -type f -print
 (3) 查找比abc.txt 新，比bcd.txt 旧的文件
 find . -newer ’abc.txt’ ! -newer ’bcd.txt’ -type f -print
-~~~
+```
 
 
 
-### 2.4.8 按大小查找
+### 3.3.8 按大小查找
 
-~~~
+```
 (1) 查找超过1M 的文件
 find / -size +1M -type f -print 　　
 (2) 查找等于600 字节的文件
@@ -384,11 +408,11 @@ find . -size 600c -print
 find . -size -32k -print
 (4) 查找当前目录下大于80M 小于100M 的文件
 find . -size +80M -a -size -100M -type f -print
-~~~
+```
 
-### 2.4.9 inum 根据i 节点查找
+### 3.3.9 -inum 根据i 节点查找
 
-~~~
+```
 可以根据文件的inode 节点值，删除该文件。有些文件很特殊，用rm 难以直接删除时，可以使用该方式。
 touch “this is test”
 rm this is test
@@ -400,11 +424,11 @@ rm: 无法删除“test”: 没有那个文件或目录
 (1) 使用ls -i
 278653 this is test
 (2) find . -inum 278653 -exec rm {} \;
-~~~
+```
 
-### 2.4.10 对搜索结果执行操作-exec 命令{} \;
+### 3.3.10 对搜索结果执行操作-exec 命令{} \;
 
-~~~
+```
 花括号代表前面find 查找出来的文件名，
 exec 解释：-exec 参数后面跟的是command 命令，它的终止是以“；”为结束标志的，所以这句命令后面的分号是不可缺少的，考虑到各个系统中分号会有不同的意义，所以前面加反斜杠。
 (1) 在/etc 下查找init 开头的所有文件，并显示详细信息
@@ -414,12 +438,12 @@ find /home -user wl -ok rm {} \;
 -ok：出现详细信息，并询问是否需要查看。回答y，则可以继续下一个信息
 (3) 查找aa.txt 并备份为aa.txt.bak
 find . -name ’aa.txt’ -exec cp {} {}.bak \;
-~~~
+```
 
-## 2.5 locate
+## 3.4 locate
 
 同find 命令相比较，locate 命令是从linux 文件数据库（/var/lib/mlocate/mlocate.db）中查找，而不是每次搜索文件系统。因为是从数据库中查找，locate 的速度远远快于find 命令。但是，使用locate 命令查找的结果仅仅是在当前数据库，结果可能会没有find 准确。
-
+```
 如果没有mlocate.db，则使用:
 (1)sudo apt-get install mlocate
 
@@ -431,15 +455,15 @@ locate android -n 5
 
 (4) 查找apt.conf 文件
 locate apt.conf
+```
+# 四、浏览文件和目录
 
-## 2.6 ls 
+## 4.1 ls 
 
 浏览文件和目录。
-
-
 显示用户当前或指定目录的内容
 
-### 2.6.1 简介
+### 4.1.1 简介
 
 ```
 ls 命令可以使用通配符*、？、[abc] [^abc]。这样可以使用户很方便地查找特定形式的文件和目录。如果不指定目录，将显示当前目录的内容。
@@ -457,9 +481,9 @@ drwxr-xr-x 140 root root 12288 9 月29 13:55 etc
 drwxr-xr-x 3 root root 4096 3 月25 2019 home
 ```
 
-### 2.6.2 选项
+### 4.1.2 选项
 
-~~~
+```
 (1)ls: 显示当前或指定目录的内容
 (2)ls -a 列出当前目录下所有文件（包括隐含文件）
 (3)ls -la 列出目录下所有文件或目录的详细信息
@@ -478,9 +502,9 @@ drwxr-xr-x 3 root root 4096 3 月25 2019 home
 (10)ls -r：逆序排序r:reverse
 (11)ls -X 按扩展名的首字母排序
 例：ls -Slhr: 以文件大小排序，以K M G 为单位，逆序显示详情
-~~~
+```
 
-## 2.7 head
+## 4.2 head
 
 用来查看文件的开头部分。
 按照默认设置，只能阅读文件的前十行。
@@ -494,7 +518,7 @@ head -5 etc/profile
 
 
 
-## 2.8 tail
+## 4.3 tail
 
 查看文件结尾部分
 缺省状态tail 命令查看文件结尾十行，与head 命令相反。
@@ -508,7 +532,7 @@ tail -f /var/log/messages
 
 
 
-## 2.9 cat
+## 4.4 cat
 
 合并文件或者显示文件的内容。
 
@@ -530,7 +554,7 @@ great 按ctrl+d 结束输入
 tac:concatenate and print files in reverse，将文件全部内容从尾到头反向连续输出到标准输出(屏幕) 上，tac 是cat 的反写，功能与cat 命令刚好相反。
 ```
 
-## 2.10 more
+## 4.5 more
 
 more 命令是一般用于要显示的内容会超过一个画面长度的情况。为了避免画面显示时瞬间就闪过去，用户可以使用more 命令，让画面在显示满一页时暂停，此时可按空格健继续显示下一个画面，按b 键就会往回（back）一页显示或按Q 键停止显示。
 
@@ -543,9 +567,9 @@ more /etc/profile屏幕在显示满一屏时暂停，此时可按空格健继续
 ls -al | more
 ```
 
+# 五、搜索文件内容
 
-
-## 2.11 grep
+## 5.1 grep
 
 搜索文件内容可以使用Global Regular Expression Print （grep）命令。
 
@@ -555,14 +579,14 @@ grep [options] [pattern] [file]
 
 
 
-### 2.11.1 选项:options
+### 5.1.1 选项:options
 
 
 ![](https://gitee.com/heathhou/image_store/raw/master/分类/linux/ubuntu/ubuntu学习笔记/20201003172900.png)
 
 ![](https://gitee.com/heathhou/image_store/raw/master/分类/linux/ubuntu/ubuntu学习笔记/20201003172919.png)
 
-### 2.11.2 模式:pattern
+### 5.1.2 模式:pattern
 
 ```
 (1) 直接输入要匹配的字符串，如要匹配hello.c 文件中
@@ -603,7 +627,7 @@ x\{m,n\} 重复字符x，至少m 次，不多于n 次，如：
 
 ```
 
-### 2.11.3 举例
+### 5.1.3 举例
 
 1、在某个文件里搜索error 字符串
 
@@ -667,14 +691,11 @@ x\{m,n\} 重复字符x，至少m 次，不多于n 次，如：
 > 
 
 
-## 2.12 awk
+## 5.2 awk
 
-awk 是一个强大的文本分析工具，相对于grep 的查找，sed 的编
-辑，awk 在其对数据分析并生成报告时，显得尤为强大。简单来
-说awk 就是把文件逐行的读入，以空格为默认分隔符将每行切
-片，切开的部分再进行各种分析处理。
+awk 是一个强大的文本分析工具，相对于grep 的查找，sed 的编辑，awk 在其对数据分析并生成报告时，显得尤为强大。简单来说awk 就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。
 
-### 2.12.1 简介
+### 5.2.1 简介
 
 ▶ 语法：
 
@@ -693,7 +714,7 @@ awk 更适合格式化文本，对文本进行较复杂格式处理。
 
 
 
-### 2.12.2 举例
+### 5.2.3 举例
 
 ```
 -F 指定分隔符, 默认为空格；
@@ -714,9 +735,9 @@ ls -lF | awk ’/^d/’
 
 ```
 
-## 2.13 硬连接和软连接文件
+# 六、 硬连接和软连接文件
 
-### 2.13.1 硬连接文件
+## 6.1 硬连接文件
 
 硬链接是通过索引节点进行的链接。在Linux 中，多个文件指向同一个索引节点是允许的，像这样的链接就是硬链接。硬链接只能在同一文件系统中的文件之间进行链接，不能对目录进行创建。如果删除硬链接对应的源文件，则硬链接文件仍然存在，而且保存了原有的内容，这样可以起到防止因为误操作而错误删除文件的作用。由于硬链接是有着相同inode 号仅文件名不同的文件，因此，删除一个硬链接文件并不影响其他有相同inode 号的文件。
 
@@ -724,7 +745,7 @@ ls -lF | awk ’/^d/’
 link oldfile newfile
 ln oldfile newfile
 
-### 2.13.2 软连接文件
+## 6.2 软连接文件
 
 软链接（也叫符号链接）与硬链接不同，文件用户数据块中存放的内容是另一文件的路径名的指向。软链接就是一个普通文件，只是数据块内容有点特殊。软链接可对文件或目录创建。
 ▶ 主要应用于两个方面：
@@ -732,7 +753,7 @@ ln oldfile newfile
 ▶ 另一方面，解决文件系统磁盘空间不足的情况。
 例如某个文件文件系统空间已经用完了，但是现在必须在该文件系统下创建一个新的目录并存储大量的文件，那么可以把另一个剩余空间较多的文件系统中的目录链接到该文件系统中，这样就可以很好的解决空间不足问题。注意：删除软链接并不影响被指向的文件，但若被指向的原文件被删除，则相关软连接就变成了死链接
 
-### 2.13.3 实验举例
+## 6.3 实验举例
 
 touch f1 # 创建一个测试文件f1
 ln f1 f2 # 创建f1 的一个硬连接文件f2
@@ -742,11 +763,13 @@ Figure 5: 软链接和硬链接文件
 从上面的结果中可以看出，硬连接文件f2 与原文件f1 的
 inode 节点相同，然而符号连接文件的inode 节点不同
 
-## 2.14 cp
+# 七、操作文件和目录
+
+## 7.1 cp
 
 复制文件或目录。
 
-### 2.14.1 语法
+### 7.1.1 语法
 
 ```
 cp [选项] 源文件目标文件
@@ -761,7 +784,7 @@ cp [选项] 源文件目标文件
 -u：若目标文件比源文件有差异，则使用该选项可以更新目标文件，此选项可用于对文件的升级和备用
 ```
 
-### 2.14.2 举例
+### 7.1.2 举例
 
 
 
@@ -796,13 +819,13 @@ c、ls 查看文件，cat 查看mylink3 内容
 > ls –l
 > cat ./mylink3
 
-### 2.14.3 注意
+### 7.1.3 注意
 
 1. ln -s 创建软链接时，用绝对路径，而不是相对路径。否则会因为找不到原文件而报错，呈现红色！
 2. 创建软连接之后，若删除了原文件，查看链接文件，也会出现同样错误！
 3. cp 复制链接文件，不加参数d，是复制的是源文件，加参数d，则复制的是链接文件。
 
-## 2.15 touch
+## 7.2 touch
 
 1. 使用ls 命令会发现，每个文件在linux 下面都会记录许多的时间参数。有三个主要的变动时间：
 - modified time(mtime)，当文件的“内容数据”更改时，就会更新这个时间。比如，使用vi 修改文件。
@@ -827,13 +850,13 @@ c、ls 查看文件，cat 查看mylink3 内容
 > 还可以使用：
    >
    > touch -d “2 days ago”testfile1 “10 years ago”touch -d “next thursday”testfile2 “next year”
-   
 
 
 
 
 
-## 2.16 mv
+
+## 7.3 mv
 
 移动文件, 可以将文件及目录移到另一目录下，或更改文件及目录的名称。
 
@@ -847,7 +870,7 @@ mv profile profile1.back
 
 
 
-## 2.17 rm
+## 7.4 rm
 
 rm 删除文件和目录。
 
@@ -868,7 +891,7 @@ rm –rf /temp
 
 
 
-## 2.18 mkdir
+## 7.5 mkdir
 
 创建目录。
 
@@ -887,7 +910,7 @@ mkdir –p /book/Linux
 
 
 
-## 2.19 redir
+## 7.6 rmdir
 
 删除目录。与创建目录类似，加上-p 参数表示如果删除一个目录后，其父目录为空，则将其父目录一同删除。
 
@@ -902,7 +925,7 @@ book 目录不为空则保留。
 
 
 
-## 2.20 umask
+## 7.7 umask
 
 ▶ 什么是umask
 当用户登录系统之后创建一个文件是会有一个默认权限的，这个权限是怎么来的呢？umask 用于设置用户创建文件或者目录的默认权限，umask 设置的是权限的“补码”。一般在/etc/profile 或和/etc/bashrc 中设置umask。
@@ -927,3 +950,204 @@ user : 	文件：	666 - 002 = 664 rw-rw-r--
 直接使用umask 命令只能临时修改umask 值，系统重启之后umask 将还原成默认值。如果要永久修改umask 值，需要修改/etc/profile 文件或是修改/etc/bashrc 文件，例如要将默认umask 值设置为027，那么可以在文件中增加一行“umask 027”。
 
 ▶ /etc/profile 和/etc/bashrc 都可以用于设置用户登录系统时自动执行某些操作，他们的区别是/etc/profile 只在用户第一次登录时被执行，而/etc/bashrc 则在用户每次登录加载Bash Shell 时都会被执行。因而，如果是修改/etc/profile 文件，将只对新创建的用户生效；而如果是修改/etc/bashrc文件，则对所有用户都生效。
+
+
+
+# 八、 文件权限管理
+
+## 8.1 chgrp
+
+chgrp 改变文件或目录的所属组。
+
+```
+语法：chgrp [选项] [组] [文件]
+
+必要参数:
+-c 当发生改变时输出调试信息
+-f 不显示错误信息
+-R 处理指定目录以及其子目录下的所有文件，递归
+-v 运行时显示详细的处理信息
+–dereference 作用于符号链接的指向，而不是符号链接本身
+–no-dereference 作用于符号链接本身
+
+选择参数:
+–reference=<文件或者目录>
+–help 显示帮助信息
+–version 显示版本信息
+```
+
+
+
+```
+例1 改变文件的群组属性并显示过程
+chgrp -v root file1.tar
+将file1.tar 文件由wl 组改变为root
+
+例2 根据指定文件改变文件的组属性
+chgrp - - reference = file1.tar file2.tar
+改变file2.tar 的组属性，使之与file1.tar 的组属性相同
+
+例3 递归改变多个文件的组属性
+chgrp -R wanglei myfile
+```
+
+
+
+## 8.2 chown 
+指定文件或目录的所有者，还可以修改文件所属组。
+
+```
+语法：chown [选项] [用户] [: 群组] [文件或目录]
+
+参数：
+-c 显示更改的部分
+-f 忽略错误信息
+-R 处理指定目录以及其子目录下的所有文件，递归
+-v 显示处理过程
+-reference=< 文件或目录> 指定某文件或目录作为参考，
+把操作的目录或文件设置成参考对象相同的所有者和组
+```
+
+
+
+```
+例1 更改所属用户
+chown wanglei /tmp/test.tmp
+
+例2 更改所属组
+chgrp wanglei /tmp/test.tmp 或chown :wanglei
+/tmp/test.tmp
+
+例3 一次性更改用户和用户组
+chown wanglei:wanglei /tmp/test.tmp
+
+例4 更改目录及子目录的所有者、所属组
+chown -R wanglei:teac /tmp/mylog
+```
+
+
+
+## 8.3 chmod 
+
+改变文件或目录的访问权限。
+
+```
+语法：chmod [OPTION]... MODE[,MODE]... FILE...
+
+mode : 权限设定字串，格式如下:
+
+ugoa...[[+-=][rwxX]...][,...]
+u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group) 者，o 表示其他以外的人，a 表示这三者皆是。
++ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。
+r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。
+```
+
+
+
+```
+例1 将文件file1.txt 设为所有人皆可读取
+chmod ugo+r file1.txt 或者chmod a+r file1.txt
+
+例2 将文件file1.txt 与file2.txt 设为: 该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
+chmod ug+w,o-w file1.txt file2.txt
+
+例3 将ex1.py 设定为只有该文件拥有者可以执行
+chmod u+x ex1.py
+
+例4 将目前目录下的所有文件与子目录皆设为任何人可读取
+chmod -R a+r *
+```
+
+
+
+```
+chmod 也可以用数字来表示权限
+语法为：chmod abc file
+
+其中a,b,c 各为一个数字，分别表示User、Group、及Other的权限
+r, 读取权限，数字代号为“4”即“100”
+w, 写入权限，数字代号为“2”即“010”
+x, 执行或切换权限，数字代号为“1”即“001”
+-, 不具任何权限，数字代号为“0”即“000”
+
+rwx 属性则4+2+1=7;rw-属性则4+2=6;-x 属性则0+0+1=1
+chmod a=rwx file 和chmod 777 file 效果相同
+chmod ug=rwx,o=x file 和chmod 771 file 效果相同
+```
+
+
+
+## 8.4 chattr & lsattr
+
+有时候发现用root 权限都不能修改某个文件，大部分原因是曾经用chattr 命令锁定了该文件。
+
+chattr：锁定文件。
+
+lsattr：查看chattr给某些文件锁定的mode。
+
+```
+chattr 命令的用法：
+chattr [ -RV ] [ -v version ] [ (+ / -)mode ] files⋯
+
+R: 递归处理
+V：显示处理过程
+
+mode(参数):
+a：(常用)即Append Only，系统只允许在这个文件之后追加数据，不允许任何进程覆盖或截断这个文件。如果目录具有这个属性，系统将只允许在这个目录下建立和修改文件，而不允许删除任何文件。
+i：(常用)即Immutable，系统不允许对这个文件进行任何的修改。
+
+A：即Atime，告诉系统不要修改对这个文件的最后访问时间。
+S：即Sync，一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘。
+b：不更新文件或目录的最后存取时间。
+c：将文件或目录压缩后存放。
+d：当dump 程序执行时，该文件或目录不会被dump 备份。
+D: 检查压缩文件中的错误。
+s：彻底删除文件，不可恢复，因为是从磁盘上删除，然后用0 填充文件所在区域。
+u：当一个应用程序请求删除这个文件，系统会保留其数据块以便以后能够恢复删除这个文件，用来防止意外删除文件或目录。
+t: 文件系统支持尾部合并（tail-merging）。
+X：可以直接访问压缩文件的内容。
+```
+
+```
+举例：
+1、用chattr 命令防止系统中某个关键文件被修改：
+chattr +i /etc/resolv.conf
+然后用mv /etc/resolv.conf 等命令操作于该文件，都是得到Operation not permitted 的结果。vim 编辑该文件时会提示W10: Warning: Changing a readonly file 错误。
+要想修改此文件就要把i 属性去掉：chattr -i /etc/resolv.conf
+
+lsattr /etc/resolv.conf
+会显示如下属性
+—-i——– /etc/resolv.conf
+
+2、让某个文件只能往里面追加数据，但不能删除，适用于各种日志文件：
+chattr +a /var/log/messages
+```
+## 8.5 setuid & setgid
+
+ setuid 是一种文件的拥有者具备的特殊属性，它使得被设置了setuid 位的程序无论被哪个用户启动，都会自动具有文件拥有者的权限。
+
+setgid 与setuid 类似，只是setgid 是文件归属的组具备的特殊属性，具有setgid 的可执行文件运行时，自动获取文件对应的组权限，因为组权限不像用户权限那样精确，所以使用setgid 的程序很少。
+
+```
+▶ 用户存储用户信息的/etc/passwd 文件只有超级用户才能进行修改，而用于存储用户口令的文件/etc/shadow 甚至只有超级用户才可以访问。只有在普通用户执行passwd 命令的时候，能够读取和修改/etc/passwd 和/etc/shadow 文件，才能使普通用户修改自己的口令。为了解决在用户修改口令时，文件系统存取权限矛盾，Linux 给/usr/sbin/passwd 命令设置了setuid 属性。
+▶ setuid 是一种文件的拥有者具备的特殊属性，它使得被设置了setuid 位的程序无论被哪个用户启动，都会自动具有文件拥有者的权限。在Linux 中典型拥有setuid 属性的文件就是/usr/bin/passwd 程序。通常setuid 属性只会设置在可执行的文件上，因为尽管理论上可以给不可执行的文件加上setuid 属性，但是这样做通常是没有意义的。
+▶ 文件属性中的s 占据的位即为setuid 位，“s”代表对应的文件被设置了setuid 属性，因为passwd 程序的拥有者是超级用户root，因此passwd 程序执行的时候就自动获取了超级用户的权限，所以无论是哪个用户执行了passwd 程序都可以修改系统的口令文件。
+```
+
+```
+【setuid】的使用
+▶ 要给一个文件加上setuid 属性，可以使用如下的命令：
+chmod u+s <文件名> 或chmod 4xxx <文件名>
+
+▶ 其中，u+s 表示给文件的拥有者添加setuid 属性，其属性字为4000，xxx 代表文件原来的存取属性。setgid 与setuid 类似，只是setgid 是文件归属的组具备的特殊属性，具有setgid 的可执行文件运行时，自动获取文件对应的组权限，因为组权限不像用户权限那样精确，所以使用setgid 的程序很少。
+
+【setgid】的使用
+▶ 要给某个文件添加setgid 属性，可以命令：
+▶ chmod g+s < 文件名> 或chmod 2xxx < 文件名>
+其中，g+s 表示给文件的归属组添加setgid 属性，其属性字为2000，xxx 代表文件原来的存取属性。
+
+▶ setuid 和setgid 属性都是对正常的Linux 安全机制开的后门，原则上，只有在明确的非用不可的功能中才使用它们。特别是，具有超级用户权限的setuid 属性的应用程序经常是系统遭受攻击的目标。慎用。
+```
+
+
+

@@ -4,6 +4,8 @@ date: 2020-09-10 19:20:13
 categories: linux
 ---
 
+<!-- more -->
+
 # 一、安装ubuntu之前，自己需要配置ubuntu的步骤
 
 1. 设置 共享粘贴板 与 拖放 为 双向
