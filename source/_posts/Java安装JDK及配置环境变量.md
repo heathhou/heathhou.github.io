@@ -1,5 +1,5 @@
 ---
-title: 安装JDK及配置环境变量
+title: Java安装JDK及配置环境变量
 date: 2020-10-17 22:29:06
 categories: 
 - Java
