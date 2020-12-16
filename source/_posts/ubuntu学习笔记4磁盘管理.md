@@ -1,11 +1,8 @@
 ---
-
-title: ubuntu学习笔记4磁盘管理
+title: Ubuntu学习笔记4磁盘管理
 date: 2020-10-21 19:37:17
-categories: 
-- linux
-- ubuntu
-- 学习笔记
+tags: [linux,ubuntu,学习笔记]
+declare: true
 ---
 
 <!-- more -->

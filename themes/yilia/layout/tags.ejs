@@ -1,0 +1,14 @@
+<article class="article">
+
+  <h3 class="category-count">共计 <%= site.tags.length %> 个标签</h3>
+
+  <hr class="category-hr-tag" width="90%" color="#987cb9" size="3">
+  
+  <div class="tag-cloud">
+    <%- tagcloud({
+      min_font: 25, 
+      max_font: 25, 
+      amount: 999
+    }) %>
+  </div>
+</article>

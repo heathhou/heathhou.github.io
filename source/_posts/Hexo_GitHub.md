@@ -2,8 +2,8 @@
 title: Hexo_GitHub
 date: 2020-03-18 16:10:03
 top: 3
-tags: 实用技术
-categories: 博客
+tags: [实用技术,博客,hexo,github]
+declare: true
 ---
 
 本文记录了利用Github搭建hexo博客的步骤。
@@ -14,11 +14,19 @@ categories: 博客
 
 [官方网站](https://nodejs.org/en/ )
 
+：
+
+https://nodejs.org/en/
+
 一路next
 
 # 2.安装Git
 
 [官方网站](https://git-scm.com/downloads)
+
+：
+
+https://git-scm.com/downloads
 
 一路next
 
@@ -42,13 +50,15 @@ categories: 博客
 
 ## （3）生成SSH key 
 
-新建一个文件夹，比如我这里建了 ==my_hexo_blog==
-打开你的文件夹，然后在空白处点鼠标的右键，选择 ==Git Bash Here==
+新建一个文件夹，比如我这里建了 my_hexo_blog
+
+打开你的文件夹，然后在空白处点鼠标的右键，选择 Git Bash Here
 
 我们以后所有的操作都在这个文件夹里，失败的话可以删掉重来。
 
 > 这个Git Bash Here就相当于Linux中的终端窗口了，以后我们就用这个东东来打开终端。
->
+
+
 > (不知道为什么我用Git Bash不管用，用cmd可以)
 
 然后输入：
@@ -56,18 +66,19 @@ categories: 博客
 >  ssh-keygen -t rsa -C "you_email@your_email.com"
 
 这个email是你在github上注册的email
+
 默认两次回车（确认路径和密码）
+
 你也可以设置密码，这里两次回车是设置没密码
 
 ## （4）把SSH key（公钥）连接到github上
 
 找到这个地址，将id_rsa.pub用记事本打开并复制里面的内容：
 
- ![](https://img2018.cnblogs.com/blog/1015208/201812/1015208-20181226115814812-1021312262.png)
+
+![](https://img2018.cnblogs.com/blog/1015208/201812/1015208-20181226115814812-1021312262.png)
 
 打开GitHub网站：
-
-
 
 ![](https://img2018.cnblogs.com/blog/981453/201908/981453-20190813153201526-547325296.png)
 
@@ -75,17 +86,17 @@ categories: 博客
 
 # 4.安装hexo
 
-1. 新建一个文件夹，比如我这里建了 ==my_hexo_blog==
-   打开你的文件夹，然后在空白处点鼠标的右键，选择 ==Git Bash Here==
+1. 新建一个文件夹，比如我这里建了 my_hexo_blog
+   打开你的文件夹，然后在空白处点鼠标的右键，选择 Git Bash Here
 
    > 这个Git Bash下载下来就相当于Linux中的终端窗口了，以后我们就用这个东东来打开终端。
-   >
+   
    > (不知道为什么我用Git Bash不管用，用cmd可以)
 
 2. 检测node 与 npm是否安装成功
 
    > node -v
-   >
+   
    >  npm -v
 
 3. 我们需要先来安装个cnpm提高速度，以后下载什么东西都用cnpm
@@ -95,7 +106,7 @@ categories: 博客
 4. 检测cnpm下载成功
 
    > cnpm
-   >
+
    > cnpm -v
 
 5. 正式安装hexo
@@ -121,7 +132,7 @@ categories: 博客
 新建一个markdown
 
 > hexo new "我的第一篇博客文章"
->
+
 > 用markdown进行编写
 
 ```
@@ -130,6 +141,7 @@ hexo g      #生成文件
 hexo  s     #运行本地服务器
 hexo  d   #上传到服务器
 ```
+
 # 6. 将博客部署到GitHub上
 
 
@@ -138,11 +150,11 @@ hexo  d   #上传到服务器
 
 > 你的github账号名称.github.io
 
-在==my_hexo_blog==文件夹里面执行下面语句，安装一个部署的插件
+在my_hexo_blog文件夹里面执行下面语句，安装一个部署的插件
 
 > cnpm install --save hexo-deployer-git
 
-配置==my_hexo_blog==里面的_config文件
+配置my_hexo_blog里面的_config文件
 
 找到Deployment，修改如下：
 
@@ -151,7 +163,7 @@ hexo  d   #上传到服务器
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 	type: git
-	repo: 从github上复制过来的东西（下图中箭头所指的东西）
+	repo: 从github上复制过来的东西（git仓库项目地址）
 	branch: master
 ```
 
@@ -183,6 +195,9 @@ hexo  d   #上传到服务器
 
 接着可以参考这篇文章：
 
-https://heathhou.github.io/2020/06/19/BlogBackup/
 
-https://heathhou.vercel.app/2020/06/19/BlogBackup/
+https://heathhou.github.io/2020/06/19/%E6%81%A2%E5%A4%8D%E5%8D%9A%E5%AE%A2/
+
+或者
+
+https://heathhou.vercel.app/2020/06/19/%E6%81%A2%E5%A4%8D%E5%8D%9A%E5%AE%A2/

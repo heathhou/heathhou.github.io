@@ -11,10 +11,31 @@
   </div>
 
 
+<!-- 不蒜子统计站点访问量 -->
+<% if (theme.busuanzi && theme.busuanzi.enable){ %>
+    <!-- 不蒜子统计 -->
+
+	<span>
+	   本站总访问次数：<span id="busuanzi_value_site_pv"></span>次
+	</span>
+
+  <span class="post-meta-divider">|</span>
+
+	<span>
+	  本站访客人数:<span id="busuanzi_value_site_uv"></span>人
+	</span>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% } %>
+
+
 </footer>
 
 <!--页面点击小红心-->
 <script type="text/javascript" src="/love.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

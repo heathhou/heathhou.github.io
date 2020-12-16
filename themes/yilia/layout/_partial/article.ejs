@@ -4,32 +4,68 @@
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
 
-
         <!--显示阅读次数-->
-<% if (!index && post.comments){ %>
-  <br/>
-  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-  <span class="icon-sort"></span>
-  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-  </span>
+        <% if (!index && post.comments){ %>
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
 
-   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-  </script>
+          <span class="icon-sort"></span>
 
-  </a>
-<% } %>
-<!--显示阅读次数完毕-->
-
-
-
+          <span  style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        <% } %>
+        <!--显示阅读次数完毕-->
 
         <% if (!post.noDate){ %>
         <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
         <% } %>
       </header>
     <% } %>
+    
     <div class="article-entry" itemprop="articleBody">
+
+    <% if (page.type === "tags") { %>
+    <div class="tag-cloud">
+      <div class="tag-cloud-title">
+      <%- _p('counter.tag_cloud', site.tags.length) %>
+      </div>
+
+      <div class="tag-cloud-tags">
+      <%- tagcloud({
+        min_font: 12,
+        max_font: 30,
+        amount: 200,
+        color: true,
+        start_color: '#ccc',
+        end_color: '#111'
+        }) %>
+      </div>
+    </div>
+
+    <% } else if (page.type === 'categories') { %>
+
+    <div class="category-all-page">
+      <div class="category-all-title">
+      <%- _p('counter.categories', site.categories.length) %>
+      </div>
+      
+      <div class="category-all">
+      <%- list_categories() %>
+      </div>
+      
+    </div>
+
+    <% } else { %>
+
+      <% if (post.excerpt && index){ %>   <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    <% } %>
+    
+      
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link) { %>
@@ -40,8 +76,48 @@
       <% } %>
 
 
-      <!-- 增加版权声明 -->
+      <% if ((theme.essayending_type === 2 || (theme.essayending_type === 1 && post.essayending)) && !index){ %>
+       <% if  (!index){ %>
+         <div class="essayending">
+           <div>
+            <div style="text-align:center;color: #ccc;font-size:22px;">
+            <br/>
+            <br/>
+            -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+            <br/>
+            <br/>
+             <br/>
+             <br/>
+            </div>
+           </div>
+         </div>
+       <% } else {%>
+         <div class="essayending" hidden="hidden"></div>
+       <% } %>
+   <% } %>
 
+
+    <!- 百度自动推送方式提交 -->
+    <% if (1){ %>
+      <script>
+      (function(){
+          var bp = document.createElement('script');
+          var curProtocol = window.location.protocol.split(':')[0];
+          if (curProtocol === 'https') {
+              bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+          }
+          else {
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+          }
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(bp, s);
+      })();
+      </script>
+    <% } %>
+    <!- 百度自动推送方式提交结束 -->
+
+
+      <!-- 增加版权声明 -->
       <%
         var sUrl = url.replace(/index\.html$/, '');
         sUrl = /^(http:|https:)\/\//.test(sUrl) ? sUrl : 'https:' + sUrl;
@@ -70,7 +146,6 @@
       <% } else {%>
         <div class="declare" hidden="hidden"></div>
       <% } %>
-
       <!-- 增加版权声明结束 -->
 
 

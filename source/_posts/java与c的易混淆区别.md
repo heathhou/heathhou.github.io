@@ -1,8 +1,8 @@
 ---
-title: java与c的易混淆区别
+title: Java与C的易混淆区别
 date: 2020-03-18 13:10:03
-top: 3
-categories: Java与C
+tags: [java,c]
+declare: true
 ---
 
 
@@ -33,6 +33,7 @@ java:
 >  
 
 其中String(jdk1.7）以后才支持
+
 expression本质上是支持***<u>int</u>***类型， byte  short  char  都默认转换成int，String根据哈希值，归跟到底还是int型。
 
 expression与case是String或者不是String要一致。
