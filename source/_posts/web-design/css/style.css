@@ -1,0 +1,317 @@
+@charset "utf-8";
+/**
+ * CSS - style.css
+*/
+/* img {
+    width: auto;
+    height: 200px;
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+    padding: 0 50px;
+} */
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.set1{
+    padding: auto;
+}
+header {
+    display: flex;
+    width: 100%;
+    background: #fff;
+}
+#navmenu {
+    float: none;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    font-family: helvetica;
+    font-size: 14px;
+    color: #666;
+    background-color: #f8f8f8;
+}
+#navmenu span.title {
+    float: left;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+#navmenu span.loginleft {
+    float: left;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: helvetica;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    visibility: hidden;
+}
+#navmenu ul {
+    list-style-type: none;
+}
+#navmenu ul li {
+    float: left;
+    position: relative;
+}
+#navmenu ul li a {
+    border-right: 1px solid #e9e9e9;
+    padding: 20px;
+    display: block;
+    color: #666;
+    text-decoration: none;
+    text-align: center;
+}
+#navmenu ul li a:hover {
+    background: #c0c0c0;
+    color: #fff;
+}
+#navmenu ul li ul {
+    display: none;
+}
+#navmenu ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 56px;
+    min-width: 190px;
+    left: 0;
+}
+#navmenu ul li:hover ul li a {
+    display: block;
+    background: #c0c0c0;
+    color: #fff;
+    width: 110px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+    border-right: none;
+}
+#navmenu ul li:hover ul li a:hover {
+    background: #c0c0c0;
+    color: #fff;
+}
+.borderleft {
+    border-left: 1px solid #e9e9e9;
+}
+.top {
+    border-top: 1px solid #f2f2f2;
+}
+#navmenu span.login {
+    float: right;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: helvetica;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    visibility: visible;
+}
+#navmenu span.login a {
+    font-size: 12px;
+    color: #888;
+}
+.content {
+    zoom:1;
+}
+.content:after {
+    content: ".";
+    display: flex;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.content .leftBox {
+    float: left;
+    width: 20%;
+    min-width: 192px;
+    height: auto;
+    margin: 5px;
+    background: #e8e8e8;
+    display: inline;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -ms-transition: width 2s ease;
+    transition: width 1s ease;
+}
+.content .middleBox {
+    float: left;
+    width: auto;
+    min-width: 320px;
+    height: 512;
+    margin: 5px;
+    background: #f0f0f0;
+    display: inline;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -ms-transition: width 1s ease;
+    transition: width 1s ease;
+}
+.content .middleBox p {
+    margin: 8px;
+    padding: 4px;
+}
+.content .middleBox img {
+    margin: 8px;
+    padding: 4px;
+    width: auto;
+    height: 300px;
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+    padding: 0 auto;
+}
+/* .content .rightBox {
+    float: left;
+    width: 15%;
+    min-width: 128px;
+    height: auto;
+    margin: 5px;
+    background: #e8e8e8;
+    display: inline;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -ms-transition: width 2s ease;
+    transition: width 1s ease;
+}
+.content .rightBox p {
+    margin: 8px;
+    padding: 4px;
+}
+.content .rightBox img {
+    margin: 8px;
+    padding: 4px;
+} */
+.navleft {
+    float: left;
+}
+.navleft ul {
+    list-style-type: none;
+}
+ul.navleftmenu {
+    width: auto;
+    padding: 8px 16px 8px 16px;
+}
+ul.navleftmenu li {
+    margin: 8px 0 8px 0;
+}
+ul.navleftmenu li a {
+    background: #cbcbcb;
+    color: #666;
+    padding: 7px 15px 7px 15px;
+    width: 96px;
+    display: block;
+    text-decoration: none;
+    /*-webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    -webkit-box-shadow:2px 2px 4px #888;
+    -moz-box-shadow:2px 2px 4px #888;
+    -o-box-shadow:2px 2px 4px #888;*/
+}
+ul.navleftmenu li a:hover {
+    background: #a8a8a8;
+    color: #fff;
+    padding: 7px 20px 7px 26px;
+}
+footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 16px 0 16px 0;
+    bottom: 0;
+    text-align: center;
+    color: #666;
+    background-color: #eee;
+}
+/*
+ * media screen queries
+*/
+@media only screen and (min-width: 1024px) {
+    .content{
+        width: auto;
+        height: auto;
+        margin: auto
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    #navmenu span.title {
+        width: 100%;
+        background-color: #fff;
+    }
+    #navmenu span.loginleft {
+        visibility: visible;
+    }
+    #navmenu span.login {
+        visibility: hidden;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+    }
+    .leftBox {
+        width: 30%;
+    }
+    .middleBox {
+        width: 65%;
+    }
+    .rightBox {
+        visibility: hidden;
+        width: 0;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+    #navmenu span.title {
+        width: 100%;
+        margin: auto;
+        background-color: #fff;
+    }
+    #navmenu span.loginleft {
+        width: 100%;
+        margin: auto;
+        visibility: visible;
+        background-color: #fff;
+    }
+    #navmenu span.login {
+        visibility: hidden;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+    }
+    .leftBox {
+        width: 30%;
+    }
+    .middleBox {
+        width: auto;
+    }
+    .rightBox {
+        visibility: hidden;
+        width: 0;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .leftBox, .middleBox, .rightBox {
+        float: left;
+        position: relative;
+        width: 98%;
+        height: auto;
+    }
+}
